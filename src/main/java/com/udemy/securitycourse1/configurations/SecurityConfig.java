@@ -33,7 +33,7 @@ public class SecurityConfig {
 //
 //        http.addFilterAfter(new JwtTokenGenerationFilter(), BasicAuthenticationFilter.class);
 //        http.addFilterBefore(new JwtTokenValidatorFilter(), BasicAuthenticationFilter.class);
-        http.addFilterAfter(newJwtValidation(), BasicAuthenticationFilter.class);
+//        http.addFilterAfter(newJwtValidation(), BasicAuthenticationFilter.class);
 
         http.authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/contact","/notices").hasRole("ADMIIN")
