@@ -23,7 +23,7 @@ public class JwtTokensService {
     }
 
     private String createToken(Map<String, Object> claims, String username) {
-        return Jwts.builder(
+        return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(username)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
